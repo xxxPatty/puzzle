@@ -23,6 +23,7 @@ struct ContentView: View {
     let player=AVPlayer()
     @State private var volleyBallPosX:Int=200
     @State private var volleyBallPosY:Int=Int(UIScreen.main.bounds.size.height)-250
+    @State private var degrees:Double=0
     @State private var DisneyMovie:[questionDisneyMovie]=[questionDisneyMovie(question:"🔔🧚‍♂🏴‍☠️⛵️", answer:"彼得潘-Peter Pan", hint:"", type:"DisneyMovie"), questionDisneyMovie(question:"🧜‍♀🦀️🐙", answer:"小美人魚-The Little Mermaid", hint:"", type:"DisneyMovie"), questionDisneyMovie(question:"🧞‍♂🐒", answer:"阿拉丁-Aladdin", hint:"", type:"DisneyMovie"), questionDisneyMovie(question:"👸🐗🕯☕️🕰", answer:"美女與野獸-Beauty and the Beast", hint:"", type:"DisneyMovie"), questionDisneyMovie(question:"🦁️🐒👑🐗", answer:"獅子王-Lion King", hint:"", type:"DisneyMovie"), questionDisneyMovie(question:"🗡👧🐎🐲🦗", answer:"花木蘭-Mulan", hint:"", type:"DisneyMovie"), questionDisneyMovie(question:"🦍👦🌲", answer:"泰山-Tarzan", hint:"", type:"DisneyMovie"), questionDisneyMovie(question:"👦👃🦗🐳", answer:"皮諾丘-Pinocchio", hint:"", type:"DisneyMovie"), questionDisneyMovie(question:"👠👸🧹👗🐭", answer:"仙度瑞拉-Cinderella", hint:"", type:"DisneyMovie"), questionDisneyMovie(question:"🍄🐱👧🐰⏱", answer:"愛麗絲夢遊仙境-Alice in Wonderland", hint:"", type:"DisneyMovie"), questionDisneyMovie(question:"⛄️❄️👸👸", answer:"冰雪奇緣-Frozen", hint:"", type:"DisneyMovie")]
     let DisneyMovieOptions:[String]=["彼得潘-Peter Pan", "小美人魚-The Little Mermaid", "阿拉丁-Aladdin", "美女與野獸-Beauty and the Beast", "獅子王-Lion King", "花木蘭-Mulan", "泰山-Tarzan", "皮諾丘-Pinocchio", "仙度瑞拉-Cinderella", "愛麗絲夢遊仙境-Alice in Wonderland", "冰雪奇緣-Frozen", "白雪公主--Snow White and the Seven Dwarfs", "寶嘉康蒂--Pocahontas", "鐘樓怪人--The Hunchback of Notre Dame", "小鹿斑比--Bambi"]
     @State private var ACG:[questionACG]=[questionACG(question:["我是要成為OOO的男人!", "想得到我的財寶嗎?想要的話可以全部給你 去找吧 我把所有的財寶都放在那裡", "俺は海賊王になる男だ"], answer:"海賊王-One Piece", hint:"", type:"ACG"), questionACG(question:["我一向有話直說，這就是我的OO", "不懂得珍惜同伴的人，連垃圾都不如", "真直ぐ自分の言葉は曲げねぇ、それが俺の忍道だ"], answer:"火影忍者-NARUTO", hint:"", type:"ACG"), questionACG(question:["1000-7等於幾?", "錯的不是我，錯的是這個世界", "1000-7とは何ですか？"], answer:"東京喰種-Tokyo Ghoul", hint:"", type:"ACG"), questionACG(question:["獻出你們的心臟吧", "那一天，人類想起了，\n曾經被那群傢伙支配的恐懼，\n以及被囚禁在鳥籠的屈辱", "心臓を捧げよ！"], answer:"進擊的巨人-Attack on Titan", hint:"", type:"ACG"), questionACG(question:["只要有我在，你就是最強的。", "OO是永遠向上看的運動", "俺がいれば、君は最強だ!"], answer:"排球少年-Haikyu!!", hint:"", type:"ACG"), questionACG(question:["真相永遠只有一個", "我不知道你們殺人的理由是什麼，\n可我知道，救人是沒有理由的。", "真相は永遠にひとつだけあるます！"], answer:"名偵探柯南-Case Closed", hint:"", type:"ACG"), questionACG(question:["我會履行我的職責！\n不會讓在場的任何人死掉！", "無論如何，都請為自己感到自豪並且努力活下去。", "俺は俺の責務を全うする！ここにいる者は誰も死なせない"], answer:"鬼滅之刃-Demon Slayer: Kimetsu no Yaiba", hint:"", type:"ACG")]
@@ -32,7 +33,37 @@ struct ContentView: View {
 
         if questionNumber==0 {
             ZStack{
-                //Image("")
+                Image("Naruto")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height:200)
+                    .position(x:150, y:UIScreen.main.bounds.size.height-200)
+                Image("Rasengan")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height:50)
+                    .rotationEffect(.degrees(Double(degrees)))
+                    .position(x:200, y:CGFloat(Int(UIScreen.main.bounds.size.height)-250))
+                    .onAppear {
+                        let baseAnimation = Animation.easeIn(duration: 1)
+                        let repeated = baseAnimation.repeatForever(autoreverses:false)
+                        withAnimation(repeated) {
+                            degrees+=360
+                        }
+                    }
+                Image("Rasengan")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height:50)
+                    .rotationEffect(.degrees(Double(degrees)))
+                    .position(x:90, y:CGFloat(Int(UIScreen.main.bounds.size.height)-250))
+                    .onAppear {
+                        let baseAnimation = Animation.easeIn(duration: 1)
+                        let repeated = baseAnimation.repeatForever(autoreverses:false)
+                        withAnimation(repeated) {
+                            degrees+=360
+                        }
+                    }
                 VStack{
                     Button(action:{
                         showRule=true
