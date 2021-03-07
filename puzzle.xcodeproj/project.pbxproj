@@ -7,19 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B02982225F3328500FE7016 /* questionWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B02982125F3328500FE7016 /* questionWord.swift */; };
+		7B02983125F3B46100FE7016 /* optionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B02983025F3B46100FE7016 /* optionButton.swift */; };
 		7B1D264C25EF83F400D165EC /* puzzleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1D264B25EF83F400D165EC /* puzzleApp.swift */; };
 		7B1D264E25EF83F400D165EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1D264D25EF83F400D165EC /* ContentView.swift */; };
 		7B1D265025EF83FA00D165EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B1D264F25EF83FA00D165EC /* Assets.xcassets */; };
 		7B1D265325EF83FA00D165EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B1D265225EF83FA00D165EC /* Preview Assets.xcassets */; };
+		7B1D265C25EF842200D165EC /* questionDisneyMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1D265B25EF842200D165EC /* questionDisneyMovie.swift */; };
+		7B1D266025F30E8C00D165EC /* questionACG.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1D265F25F30E8C00D165EC /* questionACG.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B02982125F3328500FE7016 /* questionWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionWord.swift; sourceTree = "<group>"; };
+		7B02983025F3B46100FE7016 /* optionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = optionButton.swift; sourceTree = "<group>"; };
 		7B1D264825EF83F400D165EC /* puzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = puzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B1D264B25EF83F400D165EC /* puzzleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = puzzleApp.swift; sourceTree = "<group>"; };
 		7B1D264D25EF83F400D165EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7B1D264F25EF83FA00D165EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B1D265225EF83FA00D165EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7B1D265425EF83FA00D165EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B1D265B25EF842200D165EC /* questionDisneyMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionDisneyMovie.swift; sourceTree = "<group>"; };
+		7B1D265F25F30E8C00D165EC /* questionACG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionACG.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +62,11 @@
 			children = (
 				7B1D264B25EF83F400D165EC /* puzzleApp.swift */,
 				7B1D264D25EF83F400D165EC /* ContentView.swift */,
+				7B1D265F25F30E8C00D165EC /* questionACG.swift */,
+				7B02982125F3328500FE7016 /* questionWord.swift */,
+				7B1D265B25EF842200D165EC /* questionDisneyMovie.swift */,
 				7B1D264F25EF83FA00D165EC /* Assets.xcassets */,
+				7B02983025F3B46100FE7016 /* optionButton.swift */,
 				7B1D265425EF83FA00D165EC /* Info.plist */,
 				7B1D265125EF83FA00D165EC /* Preview Content */,
 			);
@@ -140,6 +152,10 @@
 			files = (
 				7B1D264E25EF83F400D165EC /* ContentView.swift in Sources */,
 				7B1D264C25EF83F400D165EC /* puzzleApp.swift in Sources */,
+				7B02983125F3B46100FE7016 /* optionButton.swift in Sources */,
+				7B1D265C25EF842200D165EC /* questionDisneyMovie.swift in Sources */,
+				7B1D266025F30E8C00D165EC /* questionACG.swift in Sources */,
+				7B02982225F3328500FE7016 /* questionWord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
